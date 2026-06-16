@@ -9,7 +9,7 @@
 
     body { 
         font-family: system-ui, sans-serif; 
-        background: var(--bg); 
+        background: var(--bg);
         color: var(--text); 
     }
 
@@ -241,4 +241,86 @@
       .form-row { grid-template-columns: 1fr; }
       .stats { grid-template-columns: 1fr 1fr; }
       #search-input { width: 100%; }
+    }
+
+    .btn-baixar,
+    .btn-excluir {
+      height: 32px;
+      padding: 0 14px;
+      border: none;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      font-family: inherit;
+      cursor: pointer;
+      transition: background .15s, transform .1s, box-shadow .15s;
+      white-space: nowrap;
+    }
+
+    .btn-baixar {
+      background: var(--accent);
+      color: #fff;
+      box-shadow: 0 1px 3px rgba(26, 110, 189, .35);
+    }
+
+    .btn-baixar:hover {
+      background: #155FA0;
+      box-shadow: 0 3px 8px rgba(26, 110, 189, .4);
+      transform: translateY(-1px);
+    }
+
+    .btn-baixar:active {
+      transform: translateY(0);
+      box-shadow: none;
+    }
+
+    .btn-baixar:disabled {
+      background: #9AABB8;
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: none;
+    }
+
+    .btn-excluir {
+      background: #FDECEA;
+      color: var(--danger);
+      border: 1px solid #F5C6C2;
+    }
+
+    .btn-excluir:hover {
+      background: var(--danger);
+      color: #fff;
+      border-color: var(--danger);
+      box-shadow: 0 3px 8px rgba(192, 57, 43, .35);
+      transform: translateY(-1px);
+    }
+
+    .btn-excluir:active {
+      transform: translateY(0);
+      box-shadow: none;
+    }
+
+    .btn-excluir:disabled {
+      opacity: .5;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    td input[type="number"] {
+      height: 32px;
+      width: 72px;
+      padding: 0 8px;
+      font-size: 13px;
+      border-radius: 6px;
+      margin-right: 6px;
+      vertical-align: middle;
+    }
+
+    td:nth-child(4) .btn-baixar {
+      vertical-align: middle;
+    }
+
+    td:nth-child(4),
+    td:nth-child(5) {
+      white-space: nowrap;
     }
