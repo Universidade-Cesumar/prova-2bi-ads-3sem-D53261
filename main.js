@@ -55,7 +55,7 @@ const API_URL = 'https://6a3099dda7f8866418d63313.mockapi.io/material';
     const amount = parseInt(qtdEl.value, 10);
 
     if (!nome)                        { showToast('Informe o nome do material.', 'err'); nomeEl.focus(); return; }
-    if (isNaN(amount) || amount < 0)  { showToast('Informe uma quantidade válida.', 'err'); qtdEl.focus(); return; }
+    if (amount < 0)                   { showToast('Informe uma quantidade válida.', 'err'); qtdEl.focus(); return; }
 
     btn.disabled = true;
     btn.textContent = 'Salvando…';
@@ -68,7 +68,7 @@ const API_URL = 'https://6a3099dda7f8866418d63313.mockapi.io/material';
       });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const novo = await res.json();
-      allItems.unshift(novo);
+      allItems.push(novo);
       renderRows(allItems);
       updateStats(allItems);
       nomeEl.value = '';
