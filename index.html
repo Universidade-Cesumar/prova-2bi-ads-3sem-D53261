@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Almoxarifado — Controle de Estoque</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo-icon">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20 7H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
+      <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>
+    </svg>
+  </div>
+  <h1>Almoxarifado</h1>
+  <span>/ Controle de Estoque</span>
+</header>
+
+<main>
+
+  <!-- Stats -->
+  <div class="card" style="padding:20px 24px;">
+    <div class="stats">
+      <div class="stat-box">
+        <div class="stat-num" id="stat-total">—</div>
+        <div class="stat-label">Total de itens cadastrados</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num" id="stat-zerado" style="color:var(--danger)">—</div>
+        <div class="stat-label">Itens com estoque zerado</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num" id="stat-qty">—</div>
+        <div class="stat-label">Unidades em estoque</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Formulário de cadastro -->
+  <div class="card">
+    <div class="card-title">Cadastrar Material</div>
+    <div class="form-row">
+      <div class="field">
+        <label for="input-nome">Nome do Material</label>
+        <input type="text" id="input-nome" placeholder="Ex: Seringa 5ml, Gaze estéril…" />
+      </div>
+      <div class="field">
+        <label for="input-quantidade">Quantidade</label>
+        <input type="number" id="input-quantidade" placeholder="0" min="0" />
+      </div>
+      <button id="btn-cadastrar">Cadastrar</button>
+    </div>
+  </div>
+
+  <!-- Tabela de materiais -->
+  <div class="card">
+    <div class="table-header">
+      <div class="card-title" style="margin:0">Inventário</div>
+      <input type="text" id="search-input" placeholder="Filtrar materiais…" />
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Material</th>
+            <th>Quantidade</th>
+            <th>ID</th>
+          </tr>
+        </thead>
+        <tbody id="lista-materiais">
+          <tr>
+            <td colspan="3">
+              <div class="state-msg"><span class="spinner"></span></div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</main>
+
+<div id="toast"></div>
+
+<script src="main.js"></script>
+</body>
+</html>
