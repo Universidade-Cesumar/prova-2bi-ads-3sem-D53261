@@ -21,7 +21,6 @@
 
 <main>
 
-  <!-- Stats -->
   <div class="card" style="padding:20px 24px;">
     <div class="stats">
       <div class="stat-box">
@@ -39,7 +38,6 @@
     </div>
   </div>
 
-  <!-- Formulário de cadastro -->
   <div class="card">
     <div class="card-title">Cadastrar Material</div>
     <div class="form-row">
@@ -55,7 +53,6 @@
     </div>
   </div>
 
-  <!-- Tabela de materiais -->
   <div class="card">
     <div class="table-header">
       <div class="card-title" style="margin:0">Inventário</div>
@@ -68,11 +65,13 @@
             <th>Material</th>
             <th>Quantidade</th>
             <th>ID</th>
+            <th>Retirada</th>
+            <th>Ação</th>
           </tr>
         </thead>
         <tbody id="lista-materiais">
           <tr>
-            <td colspan="3">
+            <td colspan="5">
               <div class="state-msg"><span class="spinner"></span></div>
             </td>
           </tr>
@@ -82,6 +81,8 @@
   </div>
 
 </main>
+
+<input type="number" id="input-retirada" style="display:none;" />
 
 <div id="toast"></div>
 
