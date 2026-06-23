@@ -1,5 +1,7 @@
 # Sistema de Controle de Materiais - Almoxarifado
 
+### Link do site: https://universidade-cesumar.github.io/prova-2bi-ads-3sem-D53261/
+
 ## Sobre o projeto
 
 Este projeto consiste em um sistema simples para auxiliar no controle de materiais de um almoxarifado. Ele permite cadastrar novos itens, consultar os materiais existentes, retirar quantidades do estoque e excluir registros quando necessário.
